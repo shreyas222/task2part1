@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'call' %}">Check other user's info</a>
+<form method='post'>
+    {% csrf_token %}
+    First Name :-
+    <input type="text" name="fname"><p>
+    Last Name :-
+    <input type="text" name="lname"><p>
+    Phone no. :-
+    <input type="number" name="phno"><p>
+    Email id :-
+    <input type="text" name="email"><p>
+    Gender :-
+    <input type="radio" name="gender" value="Male">Male<p>
+    <input type="radio" name="gender" value="Female">Female<p>
+    <input type="radio" name="gender" value="None">None<p>
+    <input type="submit" value="Submit data">
+</form>
+</body>
+</html>
